@@ -1,0 +1,24 @@
+.navbar { margin-top: 1.5em; }
+
+.nav.nav-tabs li:last-of-type { float: right; }
+
+.nav.nav-disabled.nav-tabs > li > a { color: grey; cursor: not-allowed; }
+.nav.nav-disabled.nav-tabs > li:not(.active) > a:hover { background: transparent; border-color: transparent; }
+
+.frequency-tuner { border: 1px solid #ddd; border-radius: 4px; padding: 0; }
+
+fieldset:not(:disabled) .frequency-tuner .cursor { cursor: pointer; }
+fieldset:not(:disabled) .frequency-tuner .station { cursor: pointer; }
+
+fieldset { padding: 0 16px; }
+
+fieldset:disabled { color: grey; cursor: not-allowed; }
+
+fieldset:not(:disabled) .cursor { color: black; }
+fieldset:not(:disabled) .frequency-tuner .cursor span.station { cursor: pointer; }
+fieldset:not(:disabled) .frequency-tuner .cursor span.station:hover { color: black; }
+
+#connector .form-group:nth-of-type(1) { margin-right: 5px; }
+#connector button { min-width: 8em; }
+
+#modulations .row:nth-child(2) { margin-top: 1em; }

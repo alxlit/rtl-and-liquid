@@ -1,0 +1,13 @@
+*.o
+app
+scratch
+test_*
+/data/*.dat
+/data/octave-workspace
+build/
+/tex/auto/
+/tex/*.aux
+/tex/*.fdb_latexmk
+/tex/*.fls
+/tex/*.log
+/tex/*.toc

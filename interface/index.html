@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rtl &amp; liquid</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <script type="text/javascript" src="js/lib/require.js"></script>
+    <script type="text/javascript">
+      require.config({
+        baseUrl: 'js/',
+        paths: {
+          'jsx': 'lib/jsx',
+          'JSXTransformer': 'lib/JSXTransformer',
+          'react': 'lib/react-with-addons',
+          'react-bootstrap': 'lib/react-bootstrap.min',
+          'text': 'lib/text'
+        },
+        jsx: {
+          fileExtension: '.jsx'
+        }
+      });
+
+      require(['jsx!app'], function(app) { app.init(); });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+	    <a class="navbar-brand" href="">rtl &amp; liquid</a>
+	  </div>
+	  <div id="connector"></div>
+	</div>
+      </nav>
+      <div id="modulations"></div>
+    </div>
+  </body>
+</html>
