@@ -1,9 +1,9 @@
 /** @jsx React.DOM */
 
-define(['jsx!am', 'jsx!client', 'jsx!fm', 'jsx!psk', 'jsx!settings',
+define(['jsx!am', 'jsx!client', 'jsx!fm', 'jsx!settings',
 	'react', 'react-bootstrap'],
        
-function(Am, Client, Fm, Psk, Settings, React, Bs) {
+function(Am, Client, Fm, Settings, React, Bs) {
   var cx = React.addons.classSet,
       NavItem = Bs.NavItem;
 
@@ -48,7 +48,6 @@ function(Am, Client, Fm, Psk, Settings, React, Bs) {
       var views = {
 	    'am': Am,
 	    'fm': Fm,
-	    'psk': Psk,
 	    'settings': Settings
 	  },
           view = views[mode]({
@@ -69,7 +68,6 @@ function(Am, Client, Fm, Psk, Settings, React, Bs) {
             <ul className={classes}>
               <NavItem onClick={this.onClick} active={mode == 'am'}>AM</NavItem>
               <NavItem onClick={this.onClick} active={mode == 'fm'}>FM</NavItem>
-	      <NavItem onClick={this.onClick} active={mode == 'psk'}>PSK</NavItem>
 	      <NavItem onClick={this.onClick} active={mode == 'settings'}>Settings</NavItem>
 	    </ul>
 	  </div>
