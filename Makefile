@@ -9,9 +9,6 @@ all: app
 
 clean:
 	rm -f *.o app
-
-proposal:
-	cd docs && latexmk -pdf proposal.tex
-
+	
 app: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(POST_CFLAGS) -o app
