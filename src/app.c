@@ -21,11 +21,6 @@ static void sighandler(int signum)
 
 int main()
 {
-  //  uint8_t x = 254;
-  //  printf("%d \n", ((int8_t) x) + 128);
-  
-  //  return 0;
-
   // initialize signal handler
   struct sigaction sigact;
 
