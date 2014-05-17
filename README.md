@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/alxlit/rtl-and-liquid/master/interface.png)
 
-It's an AM/FM software-defined radio application that uses [RTL-SDR](http://sdr.osmocom.org/trac/wiki/rtl-sdr) and [liquid-dsp](http://liquidsdr.org/). It is written purely in C and has quite good performance, capable of ~70 ksamples/s throughput with FM on a [BeagleBone Black](http://beagleboard.org/Products/BeagleBone%20Black). It also features a novel web-based interface that uses WebSockets (via [libwebsockets](http://libwebsockets.org)) to stream data and WebAudio to play it.
+It's an AM/FM software-defined radio demonstration application that uses [RTL-SDR](http://sdr.osmocom.org/trac/wiki/rtl-sdr) and [liquid-dsp](http://liquidsdr.org/). It is written purely in C and has quite good performance, capable of ~70 ksamples/s throughput with FM on a [BeagleBone Black](http://beagleboard.org/Products/BeagleBone%20Black). It also features a novel web-based interface that uses WebSockets (via [libwebsockets](http://libwebsockets.org)) to stream data and WebAudio to play it.
 The interface is a **prototype** and is rather fragile.
 It works with Chromium (run with `--disable-web-security`) or Firefox 29+.
 
@@ -37,10 +37,11 @@ $ echo "install dvb_usb_rtl28xxu /bin/false" >> /etc/modprobe.d/blacklist.conf
 $ cp build/librtlsdr-master/rtl-sdr.rules /etc/udev/rules.d/
 ```
 
-## Authors
+## Attributions
 
 Alex Little, Ryan McCall, and Patrick Evensen worked on this project for Virginia Tech's *ECE 4984: Software-Defined and Cognitive Radio Design* course, offered in Spring 2014.
-Thanks to assitance from Dr. Dietrich (the course instructor) and Dr. Gaeddert (creator of liquid-dsp).
+Thanks to assitance from Dr. Dietrich (course instructor) and Dr. Gaeddert (liquid-dsp).
+Also thanks to Osmocom (RTL-SDR), especially Kyle Keen (rtl\_fm).
 
 ## License
 
