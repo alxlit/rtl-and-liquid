@@ -29,7 +29,7 @@ function(Client, Connector, Modulations, React) {
       var self = this;
       
       this.ac = new AudioContext();
-      this.anode = this.ac.createJavaScriptNode(this.bufferSize, this.inputChannels,
+      this.anode = this.ac.createScriptProcessor(this.bufferSize, this.inputChannels,
 						this.outputChannels);
 
       // set up audio processing

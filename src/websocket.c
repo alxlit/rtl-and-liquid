@@ -162,7 +162,8 @@ websocket websocket_create()
 
   struct lws_context_creation_info * info =
     malloc(sizeof(struct lws_context_creation_info));
-  
+  memset(info, 0, sizeof(*info));
+
   lws_set_log_level(LLL_ERR, NULL);
 
   info->port = 8080;  
